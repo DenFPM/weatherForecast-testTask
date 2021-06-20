@@ -1,0 +1,42 @@
+{
+    "title": {
+        "1": "Notes - now you don't forget anything"
+    },
+    "description": {
+        "1": "Take notes anywhere. Find information faster. Share ideas with anyone. Meeting notes, web pages, projects, to-do lists—with us as your note taking app, nothing falls through the cracks."
+    },
+    "add": {
+        "1": "add"
+    },
+    "cities":[
+        {"name":"Dnepr"},
+        {"name":"Kyiv"},
+        {"name":"lviv"},
+        {"name":"Kharkiv"},
+        {"name":"Donetsk"},
+        {"name":"Kherson"},
+        {"name":"Odessa"},
+        {"name":"Chernihiv"},
+        {"name":"Mykolaiv"},
+        {"name":"Zhytomyr"},
+        {"name":"Lugansk"},
+        {"name":"Mariupol"},
+        {"name":"Krivoy Rog"},
+        {"name":"Sumy"},
+        {"name":"Kamyanske"}
+    ],
+    "cityName": {
+        "1": "City name..."
+    },
+    "wind": {
+        "1": "Wind"
+    },
+    "humidity": {
+        "1": "Humidity"
+    },
+    "pressure": {
+        "1": "Pressure"
+    }
+
+    
+}
