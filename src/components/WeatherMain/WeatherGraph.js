@@ -1,17 +1,23 @@
 import { Line } from "react-chartjs-2";
 import Chart from "chart.js";
 import ChartDataLabels from "chartjs-plugin-datalabels";
-import React from 'react';
-
+import React, { useEffect } from "react";
 
 const isSomeValueNegative = (element) => element < 0;
 
 function WeatherGraph({ dataDegrees, labels }) {
+  useEffect(() => {
+    console.log("labels", labels);
+    console.log("dataDegrees", dataDegrees);
+  }, [dataDegrees, labels]);
+
   Chart.plugins.register(ChartDataLabels);
   const data = (canvas) => {
     const ctx = canvas.getContext("2d");
     let gradient = ctx.createLinearGradient(25, 20, 17, 180);
-    (dataDegrees.some(isSomeValueNegative)) ? gradient.addColorStop(0, "rgba(91, 140, 255, 0.6)") : gradient.addColorStop(0, "rgba(255, 113, 91, 0.6)")
+    dataDegrees.some(isSomeValueNegative)
+      ? gradient.addColorStop(0, "rgba(91, 140, 255, 0.6)")
+      : gradient.addColorStop(0, "rgba(255, 113, 91, 0.6)");
     gradient.addColorStop(1, "rgba(255, 244, 244, 0.4)");
     return {
       labels: labels,
@@ -37,6 +43,7 @@ function WeatherGraph({ dataDegrees, labels }) {
       ],
     };
   };
+  //лул
   const options = {
     layout: {
       padding: {
